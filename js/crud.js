@@ -1,5 +1,4 @@
 
-/* 
 $(function() {
     $(document).on("click", "a#listar_contato", function() {
     getListarContato();
@@ -30,5 +29,5 @@ $(function() {
     $("input").removeClass('error').next('span').remove();
     });
     });
-*/
+
     
