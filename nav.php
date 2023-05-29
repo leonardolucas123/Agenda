@@ -7,5 +7,5 @@
   </div>
 </nav>
 <div id="carregando" style="display: none; text-align: center;">
-  <img src="./img/carregando.gif" />
+  <img src="./img/carregando1.gif" />
 </div>
