@@ -59,9 +59,9 @@
         </div>
 
     </div>
-    <script type="text/javascript" src="./resources/lib/jquery/js/jquery-3.1.1.js"></script>
-    <script type="text/javascript" src="./resources/lib/bootstrap/js/bootstrap.js"></script>
-    <script type="text/javascript" src="./resources/common/js/crud.js"></script>
+    <script type="text/javascript" src="./js/jquery-3.7.0.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.js"></script>
+    <script type="text/javascript" src="./js/crud.js"></script>
 
 
 </body>
