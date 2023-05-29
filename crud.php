@@ -1,13 +1,13 @@
 <?php
-const SERVIDOR = "localhost:3306";
+const SERVIDOR = "localhost:3306";
 const BANCO = "agenda";
 const USUARIO = "root";
-const SENHA = "root";
-if (! isset ( $_POST ['acao'] )) {
+const SENHA = "";
+if (! isset ( $_POST ['acao'] )) {
 print json_encode ( 0 );
 return;
 }
-switch ($_POST ['acao']) {
+switch ($_POST ['acao']) {
 case 'buscar_contato' :
 $contato = new stdClass ();
 $contato = json_decode ( $_POST ['contato'] );
