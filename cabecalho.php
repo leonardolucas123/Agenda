@@ -5,8 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CRUD Contato - PHP Profissional</title>
-<link href="./resources/lib/bootstrap/css/bootstrap.css"
-rel="stylesheet">
+<link href="./css/bootstrap.css">
 <body>
 <div class="container">
 <div class="jumbotron">
