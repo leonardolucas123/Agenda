@@ -1,9 +1,17 @@
 <?php
+<<<<<<< Updated upstream
 const SERVIDOR = "localhost:3306";
 const BANCO = "agenda";
 const USUARIO = "root";
 const SENHA = "";
 if (! isset ( $_POST ['acao'] )) {
+=======
+const SERVIDOR = "localhost:8081";
+const BANCO = "agenda";
+const USUARIO = "root";
+const SENHA = "";
+if (! isset ( $_POST ['acao'] )) {
+>>>>>>> Stashed changes
 print json_encode ( 0 );
 return;
 }
