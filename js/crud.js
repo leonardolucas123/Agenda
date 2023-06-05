@@ -46,7 +46,7 @@ function criaListagemTabela(jsonDados) {
     tabela += '<table class="table table-hover table-bordered"><thead><tr>';
     tabela += '<th scope="col">#</th><th scope="col">Nome</th>'
     tabela += '<th scope="col">Telefone</th><th scope="col">E-mail</th>';
-    tabela += '<th scope="col">Endereço</th><th scope="col"></th><th scope="col"></th></tr></thead><tbody>';
+    tabela += '<th scope="col">Endereço</th><th scope="col">Site</th><th scope="col"></th></tr></thead><tbody>';
     $.each(
         jsonDados,
         function (indice, contato) {
@@ -56,6 +56,7 @@ function criaListagemTabela(jsonDados) {
             tabela += '<td>' + contato.telefone + '</td>';
             tabela += '<td>' + contato.email + '</td>';
             tabela += '<td>' + contato.endereco + '</td>';
+            tabela += '<td>' + contato.site + '</td>';
             tabela += '<td><a href="javascript:void(0);" id="editar_contato" contato_id="'
                 + contato.id
                 + '" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-pencil"></i></a></td>';
@@ -89,6 +90,12 @@ function getFormularioInclusao() {
     form += '</div>';
     form += '</div>';
     form += '<div class="form-group">';
+    form += '<label for="site" class="col-sm-2 control-label glyphicon glyphicon-phone"></label>';
+    form += '<div class="col-sm-8">';
+    form += '<input type="tel" class="form-control" id="site" placeholder="site / rede-social">';
+    form += '</div>';
+    form += '</div>';
+    form += '<div class="form-group">';
     form += '<label for="endereco" class="col-sm-2 control-label glyphicon glyphicon-home"></label>';
     form += '<div class="col-sm-8">';
     form += '<textarea class="form-control" rows="3" id="endereco" placeholder="Endereço"></textarea>';
@@ -110,6 +117,7 @@ function salvarContato() {
     Contato.telefone = $('input#telefone').val();
     Contato.email = $('input#email').val();
     Contato.endereco = $('textarea#endereco').val();
+    Contato.site = $('input#site').val();
     var contatoJson = JSON.stringify(Contato);
     $.post('crud.php', {
         acao: 'adicionar_contato',
@@ -177,7 +185,14 @@ function getFormularioEdicao(jsonDado) {
                 form += '<label for="email" class="col-sm-2 control-label glyphicon glyphicon-envelope"></label>';
                 form += '<div class="col-sm-8">';
                 form += '<input type="email" class="form-control" id="email" placeholder="E-mail" value="'
-                    + contato.email + '">';
+                    + contato.site + '">';
+                form += '</div>';
+                form += '</div>';
+                form += '<div class="form-group">';
+                form += '<label for="site" class="col-sm-2 control-label glyphicon glyphicon-envelope"></label>';
+                form += '<div class="col-sm-8">';
+                form += '<input type="site" class="form-control" id="site" placeholder="Site" value="'
+                    + contato.email + '">';    
                 form += '</div>';
                 form += '</div>';
                 form += '<div class="form-group">';
@@ -204,6 +219,7 @@ function salvarContatoEdicao() {
     Contato.telefone = $('input#telefone').val();
     Contato.email = $('input#email').val();
     Contato.endereco = $('textarea#endereco').val();
+    Contato.site = $('input#site').val();
     var contatoJson = JSON.stringify(Contato);
     $.post('crud.php', {
         acao: 'editar_contato',
